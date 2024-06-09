@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import warnings
+warnings.filterwarnings('ignore')
 
 class CreatePlots:
     def __init__(self):
@@ -50,9 +52,6 @@ class CreatePlots:
         plt.show()
 
     def box_plots(self, dataset, col=None, path=None, ax_fontsize=None):
-        import warnings
-        warnings.filterwarnings('ignore')
-
         fig, ax = plt.subplots(1, 1, figsize=(15, 6))
         ax = sns.boxplot(
             data=dataset, 
@@ -81,9 +80,6 @@ class CreatePlots:
         plt.show()
 
     def violin_plots(self, dataset, col=None, path=None, ax_fontsize=None):
-        import warnings
-        warnings.filterwarnings('ignore')
-
         fig, ax = plt.subplots(1, 1, figsize=(15, 6))
         ax = sns.violinplot(
             data=dataset, 

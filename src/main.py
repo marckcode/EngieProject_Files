@@ -1,8 +1,6 @@
 from plotter import CreatePlots
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 df_pwf16 = pd.read_csv('../data/DF_Intercambios.csv')
 df_pwf25 = pd.read_csv('../data/DF_HVDC.csv').drop('Nome Elo', axis=1)
