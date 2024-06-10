@@ -27,10 +27,10 @@ if __name__ == '__main__':
     #                   col='P(MW)', 
     #                   path=path, 
     #                   ax_fontsize=11)
-    plotter.create_heatmap(dataset=df_pwf, 
-                            nome_elo='Fluxo_RSUL', 
-                            col='P(MW)', 
-                            frm='R', 
-                            to='SUL', 
-                            path=path, 
-                            ax_fontsize=11)
+    # plotter.create_heatmap(dataset=df_pwf, 
+    #                         nome_elo='Fluxo_RSUL', 
+    #                         col='P(MW)', 
+    #                         frm='R', 
+    #                         to='SUL', 
+    #                         path=path, 
+    #                         ax_fontsize=11)

@@ -51,7 +51,7 @@ class CreatePlots:
 
         plt.show()
 
-    def box_plots(self, dataset, col=None, path=None, ax_fontsize=None):
+    def box_plots(self, dataset, col=None, path=None, ax_fontsize=None, scenario=None):
         fig, ax = plt.subplots(1, 1, figsize=(15, 6))
         ax = sns.boxplot(
             data=dataset, 
@@ -63,6 +63,9 @@ class CreatePlots:
             hue=dataset['Nome Elo'],
             palette=sns.color_palette("hls", 8)
         )
+
+        if scenario != None:
+            ax.set_title(f'{scenario}')
 
         ax.set_ylabel(f'{col}', weight='bold', fontsize=13)
         ax.set_xlabel('Nome Elo', weight='bold', fontsize=13)
@@ -79,7 +82,7 @@ class CreatePlots:
 
         plt.show()
 
-    def violin_plots(self, dataset, col=None, path=None, ax_fontsize=None):
+    def violin_plots(self, dataset, col=None, path=None, ax_fontsize=None, scenario=None):
         fig, ax = plt.subplots(1, 1, figsize=(15, 6))
         ax = sns.violinplot(
             data=dataset, 
@@ -88,6 +91,8 @@ class CreatePlots:
             hue=dataset['Nome Elo'],
             palette=sns.color_palette("hls", 8)
         )
+        if scenario != None:
+            ax.set_title(f'{scenario}')
 
         ax.set_ylabel(f'{col}', weight='bold', fontsize=13)
         ax.set_xlabel('Nome Elo', weight='bold', fontsize=13)
